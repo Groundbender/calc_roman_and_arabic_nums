@@ -47,8 +47,7 @@ const getNums = (string) => {
 const romanToArabic = (string) => {
   return string.split("").reduce((prevVal, currVal, i, arr) => {
     const [a, b, c] = [digits[arr[i]], digits[arr[i + 1]], digits[arr[i + 2]]];
-    if (b && c && a <= b && b < c) {
-    }
+
     return b > a ? prevVal - a : prevVal + a;
   }, 0);
 };
